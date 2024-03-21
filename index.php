@@ -110,3 +110,53 @@
     echo "Это не число";
   ?>
  <br>
+
+ <!-- Явное и неявное приведение типов -->
+
+ <?php
+  $str = '22,5';
+  $number = $str - 10;
+  echo $number
+  ?>
+ <br>
+
+ <?php
+  $myStr = '22,5qwerty';
+  $number = $myStr - 10;
+  echo $number
+  ?>
+ <br>
+
+ <?php
+  echo true // 1
+  ?>
+ <br>
+
+ <?php
+  echo false // пустая строка 
+  ?>
+ <br>
+
+ <?php
+  $float = 4.3;
+  $number = (int)$float;
+  echo $number
+  ?>
+ <br>
+
+ <?php
+  $num = 24;
+  $f = (float)($num / 2) - (int)($num / 2);
+  if ($f) {
+    echo 'Число нечётное';
+  } else {
+    echo 'Число четное';
+  }
+  ?>
+ <br>
+
+ <!-- Округление чисел --> 
+
+ <?php 
+  echo round(21.4356767, 2); // 21.44
+ ?>
